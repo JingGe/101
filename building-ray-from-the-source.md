@@ -4,6 +4,16 @@ The official document about this topic could be found at: [https://ray.readthedo
 
 As I followed the introduction, I have run into many problems. This document will note down everything as I built the Ray from the source.
 
+## Checkout Ray
+
+Chose a dir, for example ~/projects, and run:
+
+> git clone [https://github.com/ray-project/ray.git](https://github.com/ray-project/ray.git)
+
+## Install Bazel
+
+Please refer to [https://docs.bazel.build/versions/master/install-os-x.html](https://docs.bazel.build/versions/master/install-os-x.html). It is easy enough to read. "Installing using binary installer" is recommended.
+
 ## Install Python
 
 First of all, go to App Store, download Xcode and install it.
@@ -39,6 +49,20 @@ Within the dir, create the venv. At the time of this writing, Ray just released 
 Activate the venv. BTW, the command for stopping the virtual env is "deactivate"
 
 > source ./venv\_github\_ray\_36/bin/activate
+
+## Preparing the build
+
+Install some prerequisite tools:
+
+> pip install cython==0.29.0 setuptools\_scm numpy six tensorflow==1.7.1 pyhocon
+
+## Build Ray
+
+Now use the same terminal and go the ray/python dir and run:
+
+> pip install -e . --verbose
+
+
 
 
 
