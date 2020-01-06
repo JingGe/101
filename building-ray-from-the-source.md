@@ -20,6 +20,26 @@ Install python, pip should be installed together automatically:
 
 > brew install python
 
+## Setup Python Virtual env
+
+Install the virtualenv:
+
+> pip3 install virtualenv
+
+Create a dir for python virtual env:
+
+> mkdir pythonvenv
+>
+> cd pythonvenv
+
+Within the dir, create the venv. At the time of this writing, Ray just released 0.8.0, The source is built with python 3.6:
+
+> virtualenv --no-site-packages --python=python3.6 venv\_github\_ray\_36
+
+Activate the venv. BTW, the command for stopping the virtual env is "deactivate"
+
+> source ./venv\_github\_ray\_36/bin/activate
+
 
 
 
