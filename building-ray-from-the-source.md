@@ -50,6 +50,12 @@ Activate the venv. BTW, the command for stopping the virtual env is "deactivate"
 
 > source ./venv\_github\_ray\_36/bin/activate
 
+Check if virtual env is active:
+
+> which python
+
+The output should be something like: ~/projects/pythonvenv/venv\_github\_ray\_36/bin/python
+
 ## Preparing the build
 
 Install some prerequisite tools:
@@ -62,7 +68,13 @@ Now use the same terminal and go the ray/python dir and run:
 
 > pip install -e . --verbose
 
+## Trouble Shooting
 
+If you see errors like:
+
+> ERROR: Could not find a version that satisfies the requirement tensorflow==1.7.1 \(from versions: 1.13.0rc1, 1.13.0rc2, 1.13.1, 1.13.2, 1.14.0rc0, 1.14.0rc1, 1.14.0, 1.15.0rc0, 1.15.0rc1, 1.15.0rc2, 1.15.0rc3, 1.15.0, 2.0.0a0, 2.0.0b0, 2.0.0b1, 2.0.0rc0, 2.0.0rc1, 2.0.0rc2, 2.0.0, 2.1.0rc0, 2.1.0rc1, 2.1.0rc2\) ERROR: No matching distribution found for tensorflow==1.7.1
+
+Please check your python version. Maybe you are using python 3.7.
 
 
 
