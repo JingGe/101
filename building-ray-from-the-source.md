@@ -106,5 +106,5 @@ This build sould be failed and you should see some output like:
 WARNING: Download from https://github.com/google/boringssl/archive/83da28a68f32023fd3b95a8ae94991a07b1f6c62.zip failed: class javax.net.ssl.SSLProtocolException Read timed out
 ```
 
-Which show that there is a network issue. Try to use a proxy.
+Which shows that there is a network issue. Try to use a proxy.
 
