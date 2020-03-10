@@ -108,3 +108,7 @@ WARNING: Download from https://github.com/google/boringssl/archive/83da28a68f320
 
 Which shows that there is a network issue. Try to use a proxy.
 
+### Local Dependencies Installation
+
+If you installed some dependencies on your local mac, e.g. boost, you may run into some cpp build issues. Please make sure either uninstall it or keep the installed version as same as the version used in bazel/ray\_deps\_setup.bzl.
+
