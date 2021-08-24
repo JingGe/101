@@ -16,7 +16,7 @@ Fork your own Flink repo and checkout source code from Github and run:
 $ mvn clean install -DskipTests
 ```
 
-If you are behind firewall, e.g. working in China, and have issue to access some dependencies, you might consider to use mirror in your maven settings.xml:
+If you are behind firewall, e.g. working in China, and have issue to access some dependencies, you might consider using mirror in your maven settings.xml, for example:
 
 ```markup
     <mirror>
