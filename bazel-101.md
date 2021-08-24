@@ -43,7 +43,7 @@ The setup of code formatting and Save Actions are important. It will avoid messi
 {% hint style="danger" %}
 you will get stuck at: 8. Build the Project in Intellij Idea \(“Build” → “Build Project”\) because of java 11 issue if only java 8 is installed on your computer. Please read the FAQ, set the project SDK and module SDK to java 8, uncheck the java11 java profile and reload all maven projects.
 
-**To save your time, just install java 11 before you start.**
+**To save your time, alternatively, you can just install java 11 before you start clone the repo.**
 {% endhint %}
 
   
