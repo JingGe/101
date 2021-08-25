@@ -1,6 +1,6 @@
 # Document To Read Before Coding
 
-This document will focus on how to get involved into Flink development and how to contribute code. It is written for experienced developers proficient with Flink concepts and architecture, e.g. stateful distributed stream processing, Flink runtime component, layered APIs, etc. Flink provides the [Hands-On Training](https://ci.apache.org/projects/flink/flink-docs-release-1.13/docs/learn-flink/overview/) for this.
+This document will focus on how to get involved into Flink development and how to contribute code. It is written for experienced developers proficient with Flink concepts and architecture, e.g. stateful distributed stream processing, Flink runtime component, layered APIs, etc. If you are not familiar with these, Flink provides the [Hands-On Training\(One of the best tutorials in the industry\)](https://ci.apache.org/projects/flink/flink-docs-release-1.13/docs/learn-flink/overview/) for you.
 
 ## Big Picture
 
@@ -22,6 +22,8 @@ Put your focus on the Beta, Ready&Evolving, MVP stages. Avoid spending time on p
 {% endhint %}
 
 It is highly recommended to ready whole page of the roadmap. The content is very valuable. After doing that, you can glance over [Community & Project Info](https://flink.apache.org/community.html) to get information about the mailing lists, Jira issue tracker, project wiki, contact to committers, etc. for the daily development. 
+
+
 
 
 
