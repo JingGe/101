@@ -37,7 +37,7 @@ You can read the official doc from Flink for further information in details:
 Open Flink as a project is easy but the IDE setup of Intellij Idea will take about one hour for the first time**:** [**https://ci.apache.org/projects/flink/flink-docs-release-1.13/docs/flinkdev/ide\_setup/**](https://ci.apache.org/projects/flink/flink-docs-release-1.13/docs/flinkdev/ide_setup/)
 
 {% hint style="info" %}
-The setup of code formatting and Save Actions are important. It will avoid messing the code up. 
+The setup of code formatting and Save Actions are important. It will avoid messing the code up. Worth doing it!
 {% endhint %}
 
 {% hint style="danger" %}
