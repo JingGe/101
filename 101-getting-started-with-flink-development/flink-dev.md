@@ -1,8 +1,8 @@
 # Setup Flink Development Environment
 
-Flink provides very comprehensive document you need to develop Flink or use Flink to develop your application. This document will try to point out the most important steps and hint to get the environment ready. 
+Flink provides very comprehensive document you might need to develop Flink or to use Flink to develop your own application. This document will focus on pointing out the most important steps and hint to get the environment ready. The goal is clear: save your time as more as possible.
 
-This document is valid for Flink 1.13. It took me two days to get everything done. Hope the estimated time could be optimized to less than 3 hours, if you might follow this guide. 
+This document is valid for Flink 1.13. It took me more than two days to get everything done. Hope the estimated time could be optimized to less than 3 hours, if you follow this guide. 
 
 ## Get the code and build Flink
 
@@ -16,7 +16,7 @@ Make sure you have Java 11 and Maven 3.2.5 installed. Fork your own Flink repo a
 $ mvn clean install -DskipTests
 ```
 
-If you are behind firewall, e.g. working in China, and have issue to access some dependencies, you might consider using mirror in your maven settings.xml, for example:
+If you are behind firewall, e.g. working in China, and have issue to access some dependencies, you might consider using mirror in your maven settings.xml, for example in China:
 
 ```markup
     <mirror>
@@ -41,9 +41,9 @@ The setup of code formatting and Save Actions are important. It will avoid messi
 {% endhint %}
 
 {% hint style="danger" %}
-I had got stuck at: 8. Build the Project in Intellij Idea \(“Build” → “Build Project”\) because of java 11 issue because only java 8 was installed on your computer. It took me hours to fix it. After searching and reading a lot of doc and blogs, finally found the right info at [FAQ section](https://ci.apache.org/projects/flink/flink-docs-release-1.13/docs/flinkdev/ide_setup/). Problem solved after setting the project SDK and module SDK to java 8, unchecking the java11 java profile and reloading all maven projects.
+I had got stuck at: 8. Build the Project in Intellij Idea \(“Build” → “Build Project”\) for java 11 issue because only java 8 was installed on my computer. It took me hours to fix it. After searching and reading a lot of docs and blogs, finally found the right info at [FAQ section](https://ci.apache.org/projects/flink/flink-docs-release-1.13/docs/flinkdev/ide_setup/). Problem solved after setting the project SDK and module SDK to java 8, unchecking the java11 maven profile and reloading all maven projects.
 
-**Alternatively, you can just install java 11 before you start cloning the repo. This will save you a lot of time.**
+**Alternatively, just install java 11 before you start cloning the repo. This will save you a lot of time.**
 {% endhint %}
 
 Now you should have a clean Flink development env ready on your local computer.   
