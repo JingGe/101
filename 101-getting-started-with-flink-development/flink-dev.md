@@ -2,7 +2,7 @@
 
 Flink provides very comprehensive document you might need to develop Flink or to use Flink to develop your own application. This document will focus on pointing out the most important steps and hint to get the environment ready. The goal is clear: save your time as more as possible.
 
-This document is valid for Flink 1.13. It took me more than two days to get everything done. Hope the estimated time could be optimized to less than 3 hours, if you follow this guide. 
+This document is valid for Flink 1.13. It took me more than two days to get everything done. Hope the estimated time could be optimized to less than 3 hours, if you follow this guide, which means a **500% improvement w.r.t. the time cost**.
 
 ## Get the code and build Flink
 
@@ -28,13 +28,13 @@ If you are behind firewall, e.g. working in China, and have issue to access some
 
 You can read the official doc from Flink for further information in details:
 
-[**https://cwiki.apache.org/confluence/display/FLINK/Setting+up+a+Flink+development+environment**](https://cwiki.apache.org/confluence/display/FLINK/Setting+up+a+Flink+development+environment)
+[Setting up a Flink development environment](https://cwiki.apache.org/confluence/display/FLINK/Setting+up+a+Flink+development+environment)
 
-[**https://ci.apache.org/projects/flink/flink-docs-release-1.13/docs/flinkdev/building/**](https://ci.apache.org/projects/flink/flink-docs-release-1.13/docs/flinkdev/building/)\*\*\*\*
+[Building Flink from Source](https://ci.apache.org/projects/flink/flink-docs-release-1.13/docs/flinkdev/building/)
 
 ## Setup Intellij Idea
 
-Open Flink as a project is easy but the IDE setup of Intellij Idea will take about one hour for the first time**:** [**https://ci.apache.org/projects/flink/flink-docs-release-1.13/docs/flinkdev/ide\_setup/**](https://ci.apache.org/projects/flink/flink-docs-release-1.13/docs/flinkdev/ide_setup/)
+Open Flink as a project is easy but the IDE setup of Intellij Idea will take about one hour for the first time**:** [Importing Flink into an IDE](https://ci.apache.org/projects/flink/flink-docs-release-1.13/docs/flinkdev/ide_setup/).
 
 {% hint style="info" %}
 The setup of code formatting and Save Actions are important. It will avoid messing the code up. Worth doing it!
