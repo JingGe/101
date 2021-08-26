@@ -28,7 +28,7 @@ It is highly recommended to ready whole page of the roadmap. The content is very
 All important information about the contribution is described in [How To Contribute](https://flink.apache.org/contributing/how-to-contribute.html) and the sections underneath. You can contribute code, document, and websites. The process described there is very precise and detailed. It has some common parts, like you have to follow the [code style and code formatting, fulfill the code quality requirement](https://flink.apache.org/contributing/code-style-and-quality-preamble.html); you should understand the [PR review process](https://flink.apache.org/contributing/reviewing-prs.html) very well to make sure your PR contains the right information so that it will be review and accepted. 
 
 {% hint style="info" %}
-This document only shows you some most important rules. You should read all information under [How To Contribute](https://flink.apache.org/contributing/how-to-contribute.html). 
+This document only shows you some most important rules. You will not make big mistake if you start contribute code only based on this document. But, It is highly recommended that you should read all information under [How To Contribute](https://flink.apache.org/contributing/how-to-contribute.html). 
 {% endhint %}
 
 Beyond these common parts, there are some special matters that need attention:
