@@ -31,6 +31,8 @@ All important information about the contribution is described in [How To Contrib
 * Document contribution requires both [English and Chinese](https://flink.apache.org/contributing/contribute-documentation.html).
 * Flink has its [own annotations](https://cwiki.apache.org/confluence/display/FLINK/Stability+Annotations) you should pay attention to while reading/contributing code.
 * Flink emphasized how important it is to have hight quality and well engineered code. I personally strongly recommend the [Clean Code concept from Uncle Bob](https://www.goodreads.com/book/show/3735293-clean-code). Furthermore, there are some professional softwares, e.g. [SonarGraph](https://www.hello2morrow.com/products/sonargraph), take care of even deeper issues about the code and software architecture.
+* There is a template for you to create new PR.
+* [Separation Of Concern](https://flink.apache.org/contributing/code-style-and-quality-pull-requests.html): Pull Requests must put cleanup, refactoring, and core changes into separate commits.
 
 {% hint style="danger" %}
 **Get consensus with the committer, before you try to contribute code.**
@@ -40,5 +42,15 @@ All important information about the contribution is described in [How To Contrib
 **Well engineered code is a must.**
 {% endhint %}
 
+{% hint style="info" %}
+Flink PR has a template with the following sections:
 
+* **What is the purpose of the change**
+* **Open Architecture Questions**
+* **Further ToDos and Follow-ups**
+* **Brief change log**
+* **Verifying this change**
+* **Does this pull request potentially affect one of the following parts:**
+* **Documentation**
+{% endhint %}
 
