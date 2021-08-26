@@ -4,6 +4,10 @@ Flink provides very comprehensive document you might need to develop Flink or to
 
 This document is valid for Flink 1.13. It took me more than two days to get everything done. Hope the estimated time could be optimized to less than 3 hours, if you follow this guide, which means a **500% improvement w.r.t. the time cost**.
 
+{% hint style="info" %}
+**Goal of this document is to save 90% of your time to get the environment ready for your development.**
+{% endhint %}
+
 ## Get the code and build Flink
 
 {% hint style="warning" %}
