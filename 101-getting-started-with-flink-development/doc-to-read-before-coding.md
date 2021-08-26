@@ -32,11 +32,13 @@ All important information about the contribution is described in [How To Contrib
 * Flink has its [own annotations](https://cwiki.apache.org/confluence/display/FLINK/Stability+Annotations) you should pay attention to while reading/contributing code.
 * Flink emphasized how important it is to have hight quality and well engineered code. I personally strongly recommend the [Clean Code concept from Uncle Bob](https://www.goodreads.com/book/show/3735293-clean-code). Furthermore, there are some professional softwares, e.g. [SonarGraph](https://www.hello2morrow.com/products/sonargraph), take care of even deeper issues about the code and software architecture.
 
-{% hint style="info" %}
+{% hint style="danger" %}
 **Get consensus with the committer, before you try to contribute code.**
 {% endhint %}
 
-{% hint style="info" %}
+{% hint style="danger" %}
 **Well engineered code is a must.**
 {% endhint %}
+
+
 
