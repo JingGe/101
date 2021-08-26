@@ -30,10 +30,13 @@ All important information about the contribution is described in [How To Contrib
 * Consensus is the king. Use mailing list to trigger discussion and reach the consensus. Big design concept can described with a [FLIP](https://cwiki.apache.org/confluence/display/FLINK/Flink+Improvement+Proposals). Use Jira to summarize the result and break down the tasks. And, obviously, use Github for the PR review and merge.
 * Document contribution requires both [English and Chinese](https://flink.apache.org/contributing/contribute-documentation.html).
 * Flink has its [own annotations](https://cwiki.apache.org/confluence/display/FLINK/Stability+Annotations) you should pay attention to while reading/contributing code.
+* Flink emphasized how important it is to have hight quality and well engineered code. I personally strongly recommend the [Clean Code concept from Uncle Bob](https://www.goodreads.com/book/show/3735293-clean-code). Furthermore, there are some professional softwares, e.g. [SonarGraph](https://www.hello2morrow.com/products/sonargraph), take care of even deeper issues about the code and software architecture.
 
-{% hint style="warning" %}
-Get consensus with the committer, before you try to contribute code.
+{% hint style="info" %}
+**Get consensus with the committer, before you try to contribute code.**
 {% endhint %}
 
-
+{% hint style="info" %}
+**Well engineered code is a must.**
+{% endhint %}
 
