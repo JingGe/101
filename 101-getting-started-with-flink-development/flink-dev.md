@@ -37,7 +37,7 @@ You can read the official doc from Flink for further information in details:
 [Building Flink from Source](https://ci.apache.org/projects/flink/flink-docs-release-1.13/docs/flinkdev/building/)
 
 {% hint style="info" %}
-**Since the maven build will take long time to download dependencies for the first time, you might consider reading the** [**contribution doc**](doc-to-read-before-coding.md) **in parallel.**
+Since the maven build will take long time to download dependencies for the first time, you might consider reading the [contribution doc](doc-to-read-before-coding.md) in parallel.
 {% endhint %}
 
 ## Setup Intellij Idea
