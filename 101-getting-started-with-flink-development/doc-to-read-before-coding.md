@@ -25,14 +25,20 @@ It is highly recommended to ready whole page of the roadmap. The content is very
 
 ## Contribution Matters Needing Attention
 
-All important information about the contribution is described in [How To Contribute](https://flink.apache.org/contributing/how-to-contribute.html) and the sections underneath. You can contribute code, document, and websites. The process described there is very precise and detailed. It has some common parts, like you have to follow the [code style and code formatting, fulfill the code quality requirement](https://flink.apache.org/contributing/code-style-and-quality-preamble.html); you should understand the [PR review process](https://flink.apache.org/contributing/reviewing-prs.html) very well to make sure your PR contains the right information so that it will be review and accepted. Beyond these common parts, there are some special matters that need attention:
+All important information about the contribution is described in [How To Contribute](https://flink.apache.org/contributing/how-to-contribute.html) and the sections underneath. You can contribute code, document, and websites. The process described there is very precise and detailed. It has some common parts, like you have to follow the [code style and code formatting, fulfill the code quality requirement](https://flink.apache.org/contributing/code-style-and-quality-preamble.html); you should understand the [PR review process](https://flink.apache.org/contributing/reviewing-prs.html) very well to make sure your PR contains the right information so that it will be review and accepted. 
+
+{% hint style="info" %}
+This document only shows you some most important rules. You should read all information under [How To Contribute](https://flink.apache.org/contributing/how-to-contribute.html). 
+{% endhint %}
+
+Beyond these common parts, there are some special matters that need attention:
 
 * Consensus is the king. Use mailing list to trigger discussion and reach the consensus. Big design concept can described with a [FLIP](https://cwiki.apache.org/confluence/display/FLINK/Flink+Improvement+Proposals). Use Jira to summarize the result and break down the tasks. And, obviously, use Github for the PR review and merge.
 * Document contribution requires both [English and Chinese](https://flink.apache.org/contributing/contribute-documentation.html).
+* There is a template for you to create new PR.
+* [Separation Of Concern](https://flink.apache.org/contributing/code-style-and-quality-pull-requests.html): Pull Requests must put cleanup, refactoring, and core changes into separate commits. These commits should be described in the **Brief change log** section of the PR. You can find an excellent example in [https://github.com/apache/flink/pull/7264](https://github.com/apache/flink/pull/7264). 
 * Flink has its [own annotations](https://cwiki.apache.org/confluence/display/FLINK/Stability+Annotations) you should pay attention to while reading/contributing code.
 * Flink emphasized how important it is to have hight quality and well engineered code. I personally strongly recommend the [Clean Code concept from Uncle Bob](https://www.goodreads.com/book/show/3735293-clean-code). Furthermore, there are some professional softwares, e.g. [SonarGraph](https://www.hello2morrow.com/products/sonargraph), take care of even deeper issues about the code and software architecture.
-* There is a template for you to create new PR.
-* [Separation Of Concern](https://flink.apache.org/contributing/code-style-and-quality-pull-requests.html): Pull Requests must put cleanup, refactoring, and core changes into separate commits.
 
 {% hint style="danger" %}
 **Get consensus with the committer, before you try to contribute code.**
@@ -46,8 +52,8 @@ All important information about the contribution is described in [How To Contrib
 Flink PR has a template with the following sections:
 
 * **What is the purpose of the change**
-* **Open Architecture Questions**
-* **Further ToDos and Follow-ups**
+* **Open Architecture Questions \(optional\)**
+* **Further ToDos and Follow-ups \(optional\)**
 * **Brief change log**
 * **Verifying this change**
 * **Does this pull request potentially affect one of the following parts:**
