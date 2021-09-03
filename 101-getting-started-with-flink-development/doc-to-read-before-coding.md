@@ -65,7 +65,7 @@ Flink PR has a template with the following sections:
 {% endhint %}
 
 {% hint style="info" %}
-Naming scheme for commits \[Jira issue\|hotfix\] \[component\], e.g.:
+Naming scheme for commits \[Jira issue\|hotfix\] \[component\] Message, e.g.:
 
 
 
