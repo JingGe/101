@@ -25,7 +25,7 @@ It is highly recommended to ready whole page of the roadmap. The content is very
 
 ## Contribution Matters Needing Attention
 
-All important information about the contribution is described in [How To Contribute](https://flink.apache.org/contributing/how-to-contribute.html) and the sections underneath. You can contribute code, document, and websites. The process described there is very precise and detailed. It has some common parts, like you have to follow the [code style and code formatting, fulfill the code quality requirement](https://flink.apache.org/contributing/code-style-and-quality-preamble.html); you should understand the [PR review process](https://flink.apache.org/contributing/reviewing-prs.html) very well to make sure your PR contains the right information so that it will be review and accepted; etc. 
+All important information about the contribution is described in [How To Contribute](https://flink.apache.org/contributing/how-to-contribute.html) and the sections underneath. You can contribute code, document, and websites. The process described there is very precise and detailed. It has some common parts, like you have to follow the [code style and code formatting, fulfill the code quality requirement](https://flink.apache.org/contributing/code-style-and-quality-preamble.html); you should understand the [PR review process](https://flink.apache.org/contributing/reviewing-prs.html) very well to make sure your PR contains the right information so that it will be reviewed and accepted; etc. 
 
 {% hint style="info" %}
 This document only shows you some most important rules. You will not make big mistake if you start contribute code only based on this document. But, It is highly recommended that you should read all information under [How To Contribute](https://flink.apache.org/contributing/how-to-contribute.html). 
@@ -37,6 +37,7 @@ Beyond these common parts, there are some special matters that need attention:
 * Document contribution requires both [English and Chinese](https://flink.apache.org/contributing/contribute-documentation.html).
 * There is a template for you to create new PR.
 * [Separation Of Concern](https://flink.apache.org/contributing/code-style-and-quality-pull-requests.html): Pull Requests must put cleanup, refactoring, and core changes into separate commits. These commits should be described in the **Brief change log** section of the PR. You can find an excellent example in [https://github.com/apache/flink/pull/7264](https://github.com/apache/flink/pull/7264). 
+* [Flink has naming scheme for commits](https://cwiki.apache.org/confluence/display/FLINK/Apache+Flink+development+guidelines). The basic naming scheme for commits is \[Jira issue\|hotfix\] \[component\] Message. Multiple commits may refer to the same issue, if the issue is fixed in multiple steps.
 * Flink has its [own annotations](https://cwiki.apache.org/confluence/display/FLINK/Stability+Annotations) you should pay attention to while reading/contributing code.
 * Flink emphasized how important it is to have high quality and well engineered code. I personally strongly recommend the [Clean Code concept from Uncle Bob](https://www.goodreads.com/book/show/3735293-clean-code). Furthermore, there are some professional softwares, e.g. [SonarGraph](https://www.hello2morrow.com/products/sonargraph), take care of even deeper issues about the code and software architecture.
 * There are [trade-offs](https://flink.apache.org/contributing/code-style-and-quality-common.html) to write code for data intensive processing, while code for coordination should continue keeping simple and clean, again Clean Code.
@@ -62,4 +63,21 @@ Flink PR has a template with the following sections:
 * **Does this pull request potentially affect one of the following parts:**
 * **Documentation**
 {% endhint %}
+
+{% hint style="info" %}
+Naming scheme for commits \[Jira issue\|hotfix\] \[component\], e.g.:
+
+
+
+```text
+[FLINK-1234] [runtime] Runtime support some cool new thing
+[FLINK-1234] [java api] Add hook for cool thing to java api
+[FLINK-1234] [scala api] Add hook for that thing to scala api
+[FLINK-1234] [optimizer] Make optimizer aware that it can exploit this thing
+
+[hotfix] [docs] Extend state checkpointing protocol
+```
+{% endhint %}
+
+
 
