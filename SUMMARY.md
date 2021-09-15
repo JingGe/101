@@ -11,3 +11,7 @@
 
 * [Build Ray from the Source on Mac](101-ray-development/building-ray-from-the-source.md)
 
+## 101 - Dev Environment Setup on Mac
+
+* [iTerm2 in 10 min](101-dev-environment-setup-on-mac/iterm2-in-10-min.md)
+
