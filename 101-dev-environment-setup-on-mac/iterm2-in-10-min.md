@@ -10,13 +10,19 @@ If you like the following iTerm2 style, you are at the right place. I will show 
 sh -c "$\(curl -fsSL [https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh](https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\)"
 {% endhint %}
 
-For reference: [https://github.com/ohmyzsh/ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
+Reference: [https://github.com/ohmyzsh/ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
+
+## Install Homebrew
+
+{% hint style="info" %}
+/bin/bash -c "$\(curl -fsSL [https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh](https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\)"
+{% endhint %}
 
 ## Install iTerm2
 
 The simplest way to install iTerm2 is to download and unzip it: [https://iterm2.com/downloads.html](https://iterm2.com/downloads.html)
 
-## Install the nerd-fonts
+## Install nerd-fonts
 
 The simplest way is to clone the repo and run the install script:
 
@@ -30,7 +36,7 @@ switch to the nerd-fonts folder and run:
 ./install.sh
 {% endhint %}
 
-## Install the powerlevel10k
+## Install powerlevel10k
 
 just clone the repo to the ohmyzsh themes folder:
 
@@ -40,5 +46,51 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH\_CUSTOM:-
 
 ## Config .zshrc
 
+change the theme to powerlevel10k:
 
+{% hint style="info" %}
+ZSH\_THEME="powerlevel10k/powerlevel10k"
+{% endhint %}
+
+setup the plugins:
+
+{% hint style="info" %}
+plugins=\(git gitignore autojump wd docker zsh-autosuggestions zsh-syntax-highlighting\)
+{% endhint %}
+
+### Install autojump
+
+{% hint style="info" %}
+brew install autojump
+{% endhint %}
+
+### Install zsh-autosuggestions
+
+{% hint style="info" %}
+git clone [https://github.com/zsh-users/zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) ${ZSH\_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+{% endhint %}
+
+### Install zsh-syntax-highlighting
+
+{% hint style="info" %}
+git clone [https://github.com/zsh-users/zsh-syntax-highlighting.git](https://github.com/zsh-users/zsh-syntax-highlighting.git) ${ZSH\_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+{% endhint %}
+
+Don't forget to call
+
+{% hint style="info" %}
+source ~/.zshrc
+{% endhint %}
+
+## Configure Powerlevel10k
+
+Now open a new iTerm and follow the wizard to configure the theme:
+
+ 
+
+![](../.gitbook/assets/image%20%283%29.png)
+
+Reference: [https://github.com/romkatv/powerlevel10k\#oh-my-zsh](https://github.com/romkatv/powerlevel10k#oh-my-zsh)
+
+## Clone iTerm2-Color-Schemes
 
