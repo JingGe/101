@@ -1,4 +1,4 @@
-# iTerm2 in 10 min
+# iTerm2 Env Setup in 10 min
 
 If you like the following iTerm2 style, you are at the right place. I will show you how to get this setup in 10 min.
 
