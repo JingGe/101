@@ -24,13 +24,13 @@ The simplest way to install iTerm2 is to download and unzip it: [https://iterm2.
 
 ## Install nerd-fonts \(optional\)
 
-The simplest way is to clone the repo and run the install script:
+Clone the repo:
 
 {% hint style="info" %}
 git clone [https://github.com/ryanoasis/nerd-fonts.git](https://github.com/ryanoasis/nerd-fonts.git)
 {% endhint %}
 
-switch to the nerd-fonts folder and run:
+Switch to the nerd-fonts folder and run:
 
 {% hint style="info" %}
 ./install.sh
