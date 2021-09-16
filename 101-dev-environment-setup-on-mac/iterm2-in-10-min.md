@@ -22,7 +22,7 @@ Reference: [https://github.com/ohmyzsh/ohmyzsh](https://github.com/ohmyzsh/ohmyz
 
 The simplest way to install iTerm2 is to download and unzip it: [https://iterm2.com/downloads.html](https://iterm2.com/downloads.html)
 
-## Install nerd-fonts \(optional\)
+## Install nerd-fonts
 
 Clone the repo:
 
