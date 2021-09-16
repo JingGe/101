@@ -13,5 +13,5 @@
 
 ## 101 - Dev Environment Setup on Mac
 
-* [iTerm2 Env Setup in 10 min](101-dev-environment-setup-on-mac/iterm2-in-10-min.md)
+* [iTerm2 Env Setup in 10 Minutes](101-dev-environment-setup-on-mac/iterm2-in-10-min.md)
 
