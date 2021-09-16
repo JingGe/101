@@ -1,7 +1,8 @@
 ---
 description: >-
-  Using iTerm2, oh-my-zsh, nerd-fonts, powerlevel10k, iTerm2-Color-Schemes, and
-  plenty plugins like autojump zsh-autosuggestions zsh-syntax-highlighting
+  On macOS Big Sur, using iTerm2, oh-my-zsh, nerd-fonts, powerlevel10k,
+  iTerm2-Color-Schemes, and plenty plugins like autojump zsh-autosuggestions
+  zsh-syntax-highlighting
 ---
 
 # iTerm2 Env Setup in 10 min
