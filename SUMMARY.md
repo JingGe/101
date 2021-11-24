@@ -6,6 +6,7 @@
 
 * [Setup Flink Development Environment](101-getting-started-with-flink-development/flink-dev.md)
 * [Document To Read Before Coding](101-getting-started-with-flink-development/doc-to-read-before-coding.md)
+* [Debug Flink ITCase](101-getting-started-with-flink-development/debug-flink-itcase.md)
 
 ## 101 - Ray Development
 
@@ -14,4 +15,3 @@
 ## 101 - Dev Environment Setup on Mac
 
 * [iTerm2 Env Setup on Mac in 10 Minutes](101-dev-environment-setup-on-mac/iterm2-in-10-min.md)
-
