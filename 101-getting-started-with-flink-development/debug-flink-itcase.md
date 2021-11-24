@@ -14,17 +14,15 @@ There 3 steps to get the remote debugging done:
 
 Go to the root directory of Flink project and run:
 
-> \<your\_dir>/flink/mvn test -Dtest=HBaseConnectorITCase -Dinclude\_hadoop\_aws -Dhadoop.version=2.8.3 -Dmaven.surefire.debug -pl flink-connectors/flink-connector-hbase-2.2
+> <mark style="color:blue;">**\<your\_dir>/flink/mvn test -Dtest=HBaseConnectorITCase -Dinclude\_hadoop\_aws -Dhadoop.version=2.8.3 -Dmaven.surefire.debug -pl flink-connectors/flink-connector-hbase-2.2**</mark>
 
 Alternatively, you can also to the Flink sub module directory, flink-connector-hbase-2.2 in this case, and run:
 
-> \<your\_dir>/flink/flink-connectors/flink-connector-hbase-2.2(FLINK-24753✔) ➭ mvn test -Dtest=HBaseConnectorITCase -Dinclude\_hadoop\_aws -Dhadoop.version=2.8.3 -Dmaven.surefire.debug
+> <mark style="color:blue;">**\<your\_dir>/flink/flink-connectors/flink-connector-hbase-2.2(FLINK-24753✔) ➭ mvn test -Dtest=HBaseConnectorITCase -Dinclude\_hadoop\_aws -Dhadoop.version=2.8.3 -Dmaven.surefire.debug**</mark>
 
 you will see in the command line output:
 
-```
-Listening for transport dt_socket at address: 5005
-```
+> **Listening for transport dt\_socket at address: 5005**
 
 Step 1 is done, let's move to step 2.
 
@@ -42,11 +40,11 @@ Step 2 is done, let's move to step 3.
 
 Now you can set up some break points in your class and start debug in the IDEA. You will see that the process in the command line will be moving forward:
 
-```
-Listening for transport dt_socket at address: 5005
-Running org.apache.flink.connector.hbase2.HBaseConnectorITCase
-Formatting using clusterid: testClusterID
-```
+> Listening for transport dt\_socket at address: 5005 Running&#x20;
+>
+> **org.apache.flink.connector.hbase2.HBaseConnectorITCase **
+>
+> **Formatting using clusterid: testClusterID**
 
 And in the IDEA, you will see the the process is paused at the break point, like this:
 
