@@ -7,6 +7,7 @@
 * [Setup Flink Development Environment](101-getting-started-with-flink-development/flink-dev.md)
 * [Document To Read Before Coding](101-getting-started-with-flink-development/doc-to-read-before-coding.md)
 * [Debug Flink ITCase](101-getting-started-with-flink-development/debug-flink-itcase.md)
+* [Solving issues in ITCase](101-getting-started-with-flink-development/solving-issues-in-itcase.md)
 
 ## 101 - Ray Development
 
