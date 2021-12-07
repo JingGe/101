@@ -112,7 +112,9 @@ Please pay attention that the mavn test was successful even if unchecked excepti
 
 ## MiniCluster has impact on TableEnvironment for ITCase
 
-Thanks for the details log information, it is easy to be aware that there were multiple Flink MiniClusters that have been started and stopped. Each up and down of a MiniCluster will take about 2s. While we using TableEnvironment like:
+Thanks for the details log information, it is easy to be aware that there were multiple Flink MiniClusters that have been started and stopped. Each up and down of a MiniCluster will take about 4s.&#x20;
+
+While we are using TableEnvironment like:
 
 ```
 StreamExecutionEnvironment execEnv = StreamExecutionEnvironment.getExecutionEnvironment();
@@ -133,27 +135,31 @@ By default, running each query via TableEnvironment in ITCase will trigger a new
 
 ## Control the lifecycle of the MiniCluster
 
+The idea case is to control the lifecycle of the MiniCluster manually for each ITCase. While we execute sql via TableEnvironment, it will check whether a MiniCluster is available. If yes, the available MiniCluster will be used for job submission.
 
+In this case, you can use JUnit @ClassRule and @Rule and the MiniClusterWithClientResource provided by Flink:
 
+```
+@ClassRule
+public static final MiniClusterWithClientResource MINI_CLUSTER = 
+       new MiniClusterWithClientResource(                
+              new MiniClusterResourceConfiguration.Builder()                        
+                     .setConfiguration(new Configuration())                        
+                     .build());
+```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Using @ClassRule will make sure a MiniCluster will be initialised before any test methods are running and stopped after all test methods are finished. In this way, the race conditions mentioned previously are solved.
 
 ## Write the ITCase efficiently
 
+By default, each query will trigger a new MiniCluster up and down. you can image how much time and resource it will cost when we run hundreds even thousands of queries.&#x20;
 
+After using @ClassRule to control it, the maven takes 1:38 min:
 
+![](<../.gitbook/assets/image (11).png>)
+
+Don't under estimate the improvement. When consider the time cost of HBase initialisation, job submit and execution etc., each test method may only cost few seconds to finish. Compare to the last maven test, we saved 15 seconds for 9 tests. The performance improvement is significantly.
+
+{% hint style="info" %}
+**It is generally recommended to control external resource like MiniCluster at the class level for ITCase unless there is a technical reason for using extra individual MiniClusters for some test methods.**
+{% endhint %}
