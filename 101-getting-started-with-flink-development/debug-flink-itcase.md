@@ -32,7 +32,7 @@ If you are not familiar with the remote debug setup in IntelliJ IDEA, please ref
 
 For this case, the setup will look like this:
 
-![](<../.gitbook/assets/image (10).png>)
+![](<../.gitbook/assets/image (10) (1).png>)
 
 Step 2 is done, let's move to step 3.
 
@@ -42,13 +42,13 @@ Now you can set up some break points in your class and start debug in the IDEA. 
 
 > Listening for transport dt\_socket at address: 5005 Running&#x20;
 >
-> **org.apache.flink.connector.hbase2.HBaseConnectorITCase **
+> **org.apache.flink.connector.hbase2.HBaseConnectorITCase**&#x20;
 >
 > **Formatting using clusterid: testClusterID**
 
 And in the IDEA, you will see the the process is paused at the break point, like this:
 
-![](<../.gitbook/assets/image (9).png>)
+![](<../.gitbook/assets/image (9) (1).png>)
 
 Now happy debugging!
 

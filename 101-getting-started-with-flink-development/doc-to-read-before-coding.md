@@ -6,7 +6,7 @@ This document will focus on how to get involved into Flink development and how t
 
 [The Flink roadmap](https://flink.apache.org/roadmap.html), especially the Feature Radar section, is the great info source to understand the big picture. The Feature Stages show us the most interesting components and their development status:
 
-> ### Feature Stages <a href="feature-stages" id="feature-stages"></a>
+> ### Feature Stages <a href="#feature-stages" id="feature-stages"></a>
 >
 > * **MVP:** Have a look, consider whether this can help you in the future.
 > * **Beta:** You can benefit from this, but you should carefully evaluate the feature.
@@ -36,7 +36,7 @@ Beyond these common parts, there are some special matters that need attention:
 * Consensus is the king. Use mailing list to trigger discussion and reach the consensus. Big design concept can described with a [FLIP](https://cwiki.apache.org/confluence/display/FLINK/Flink+Improvement+Proposals). Use Jira to summarize the result and break down the tasks. And, obviously, use Github for the PR review and merge.
 * Document contribution requires both [English and Chinese](https://flink.apache.org/contributing/contribute-documentation.html).
 * There is a template for you to create new PR.
-* [Separation Of Concern](https://flink.apache.org/contributing/code-style-and-quality-pull-requests.html): Pull Requests must put cleanup, refactoring, and core changes into separate commits. These commits should be described in the **Brief change log **section of the PR. You can find an excellent example in [https://github.com/apache/flink/pull/7264](https://github.com/apache/flink/pull/7264).&#x20;
+* [Separation Of Concern](https://flink.apache.org/contributing/code-style-and-quality-pull-requests.html): Pull Requests must put cleanup, refactoring, and core changes into separate commits. These commits should be described in the **Brief change log** section of the PR. You can find an excellent example in [https://github.com/apache/flink/pull/7264](https://github.com/apache/flink/pull/7264).&#x20;
 * [Flink has naming scheme for commits](https://cwiki.apache.org/confluence/display/FLINK/Apache+Flink+development+guidelines). The basic naming scheme for commits is \[Jira issue|hotfix] \[component] Message. Multiple commits may refer to the same issue, if the issue is fixed in multiple steps.
 * Flink has its [own annotations](https://cwiki.apache.org/confluence/display/FLINK/Stability+Annotations) you should pay attention to while reading/contributing code.
 * Flink emphasized how important it is to have high quality and well engineered code. I personally strongly recommend the [Clean Code concept from Uncle Bob](https://www.goodreads.com/book/show/3735293-clean-code). Furthermore, there are some professional softwares, e.g. [SonarGraph](https://www.hello2morrow.com/products/sonargraph), take care of even deeper issues about the code and software architecture.

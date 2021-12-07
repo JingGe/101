@@ -70,7 +70,7 @@ logger.minicluster.name = org.apache.flink.runtime.minicluster
 logger.minicluster.level = INFO
 ```
 
-With this setup, all INFO level log messages of hbase2 connector and minicluster and only WARN level log messages of other components will be shown in the rolling files.&#x20;
+With this setup, to minimise the log output, all INFO level log messages of hbase2 connector and minicluster and only WARN level log messages of other components will be shown in the rolling files.&#x20;
 
 In case you want to see the log in the console, you can activate the STDOUT appenderRef.
 
@@ -79,6 +79,8 @@ It is recommend the set **rootLogger.level = INFO** for your first check of an I
 {% endhint %}
 
 ## Find the root cause of issue [FLINK-24077](https://issues.apache.org/jira/browse/FLINK-24077)
+
+**Set rootLogger.level = INFO for trouble shooting.**
 
 Make sure you have built Flink. Now go to the Flink root directory and run:
 
@@ -90,29 +92,44 @@ mvn test
 -pl flink-connectors/flink-connector-hbase-2.2
 ```
 
+![](<../.gitbook/assets/image (12).png>)
 
+you will see the log has been created:
 
+![](<../.gitbook/assets/image (9).png>)
 
+In the log file you will get details information like a HBase MiniCluster and multiple Flink MiniClusters  will be initialized, how tasks were executed, etc.
 
+When you walk through the log, you will find there are some thrown runtime exception java.lang.IllegalStateException tells us that the MiniCluster is not yet running or has already been shut down, which turns out that the CollectResultFetcher was Failed and some data might be lost.
 
+![](<../.gitbook/assets/image (10).png>)
 
+The root cause is, since the shutdown of the MiniCluster will be called asynchronously, CollectResultFetcher will got data lost sometimes based on race conditions and the unchecked RuntimeException java.lang.IllegalStateException will be thrown that we were not aware of.
 
+{% hint style="danger" %}
+Please pay attention that the mavn test was successful even if unchecked exceptions have been thrown.&#x20;
+{% endhint %}
 
+## MiniCluster has impact on TableEnvironment for ITCase
 
+Thanks for the details log information, it is easy to be aware that there were multiple Flink MiniClusters that have been started and stopped. Each up and down of a MiniCluster will take about 2s. While we using TableEnvironment like:
 
-## MiniCluster has impact on TableEnvironment
+```
+StreamExecutionEnvironment execEnv = StreamExecutionEnvironment.getExecutionEnvironment();
+StreamTableEnvironment tableEnv = StreamTableEnvironment.create(execEnv, streamSettings);
+```
 
+each time when we execute a sql query like:&#x20;
 
+```
+tableEnv.sqlQuery("...");
+```
 
+a new MiniCluster will be started and then stopped asynchronously after the job is finished in the background.
 
-
-
-
-
-
-
-
-
+{% hint style="danger" %}
+By default, running each query via TableEnvironment in ITCase will trigger a new MiniCluster being started and stopped in the background. It will cost time and resource.
+{% endhint %}
 
 ## Control the lifecycle of the MiniCluster
 
