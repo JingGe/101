@@ -5,7 +5,7 @@ description: >-
   HBaseConnectorITCase
 ---
 
-# Solving issues in ITCase
+# Best Practices working with ITCase
 
 While solving issue in ITCase, the first thing to do is to understand the running process. You can [debug the ITCase](debug-flink-itcase.md) to get runtime information in details. If you want to quickly have a big picture of it, a good choice is to change the log setup to the insight information of the running process.
 
@@ -158,7 +158,7 @@ After using @ClassRule to control it, the maven takes 1:38 min:
 
 ![](<../.gitbook/assets/image (11).png>)
 
-Don't under estimate the improvement. When consider the time cost of HBase initialisation, job submit and execution etc., each test method may only cost few seconds to finish. Compare to the last maven test, we saved 15 seconds for 9 tests. The performance improvement is significantly.
+Don't under estimate the improvement. After considering the time cost of HBase initialisation, job submit and execution etc., each test method may only cost few seconds to finish. Compare to the last maven test, we saved 15 seconds for 9 tests. The performance improvement is significantly.
 
 {% hint style="info" %}
 **It is generally recommended to control external resource like MiniCluster at the class level for ITCase unless there is a technical reason for using extra individual MiniClusters for some test methods.**
