@@ -162,6 +162,10 @@ After using @ClassRule to control it, the maven takes 1:38 min:
 
 Don't under estimate the improvement. After considering the time cost of HBase initialisation, job submit and execution etc., each test method may only cost few seconds to finish. Compare to the last maven test, we saved 15 seconds for 9 tests. The performance improvement is significantly.
 
+{% hint style="warning" %}
+Please be aware that most of ITCases are working with MiniCluster implicitly or explicitly.
+{% endhint %}
+
 {% hint style="info" %}
 **It is generally recommended to control external resource like MiniCluster at the class level for ITCase unless there is a technical reason for using extra individual MiniClusters for some test methods.**
 {% endhint %}
