@@ -80,7 +80,9 @@ It is recommend the set **rootLogger.level = INFO** for your first check of an I
 
 ## Find the root cause of issue [FLINK-24077](https://issues.apache.org/jira/browse/FLINK-24077)
 
-**Set rootLogger.level = INFO for trouble shooting.**
+{% hint style="info" %}
+**It is recommended to set rootLogger.level = INFO for trouble shooting.**
+{% endhint %}
 
 Make sure you have built Flink. Now go to the Flink root directory and run:
 
@@ -98,7 +100,7 @@ you will see the log has been created:
 
 ![](<../.gitbook/assets/image (9).png>)
 
-In the log file you will get details information like a HBase MiniCluster and multiple Flink MiniClusters  will be initialized, how tasks were executed, etc.
+In the log file you will get details information like a HBase MiniCluster and multiple Flink MiniClusters  will be initialised, how tasks were executed, etc.
 
 When you walk through the log, you will find there are some thrown runtime exception java.lang.IllegalStateException tells us that the MiniCluster is not yet running or has already been shut down, which turns out that the CollectResultFetcher was Failed and some data might be lost.
 
