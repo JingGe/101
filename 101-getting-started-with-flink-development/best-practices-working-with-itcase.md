@@ -7,6 +7,10 @@ description: >-
 
 # Best Practices working with ITCase
 
+{% hint style="info" %}
+GitHub repo: [https://github.com/JingGe/101](https://github.com/JingGe/101)
+{% endhint %}
+
 While solving issue in ITCase, the first thing to do is to understand the running process. You can [debug the ITCase](debug-flink-itcase.md) to get runtime information in details. If you want to quickly have a big picture of it, a good choice is to change the log setup to the insight information of the running process.
 
 {% hint style="info" %}

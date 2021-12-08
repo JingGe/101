@@ -1,5 +1,9 @@
 # Setup Flink Development Environment
 
+{% hint style="info" %}
+GitHub repo: [https://github.com/JingGe/101](https://github.com/JingGe/101)
+{% endhint %}
+
 Flink provides very comprehensive document you might need to develop Flink or to use Flink to develop your own application. This document will focus on pointing out the most important steps and hint to get the environment ready. The goal is clear: save your time as more as possible.
 
 This document is valid for Flink 1.13. It took me more than two days to get everything done. Hope the estimated time could be optimized to less than 3 hours, if you follow this guide, which means a **500% improvement w.r.t. the time cost**.

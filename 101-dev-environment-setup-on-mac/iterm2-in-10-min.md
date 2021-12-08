@@ -7,14 +7,18 @@ description: >-
 
 # iTerm2 Env Setup on Mac in 10 Minutes
 
+{% hint style="info" %}
+GitHub repo: [https://github.com/JingGe/101](https://github.com/JingGe/101)
+{% endhint %}
+
 If you like the following iTerm2 style, you are at the right place. I will show you how to get this setup in 10 min.
 
-![](../.gitbook/assets/image%20%283%29.png)
+![](<../.gitbook/assets/image (3).png>)
 
 ## Install ohmyzsh
 
 {% hint style="info" %}
-sh -c "$\(curl -fsSL [https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh](https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\)"
+sh -c "$(curl -fsSL [https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh](https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh))"
 {% endhint %}
 
 Reference: [https://github.com/ohmyzsh/ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
@@ -22,7 +26,7 @@ Reference: [https://github.com/ohmyzsh/ohmyzsh](https://github.com/ohmyzsh/ohmyz
 ## Install Homebrew
 
 {% hint style="info" %}
-/bin/bash -c "$\(curl -fsSL [https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh](https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\)"
+/bin/bash -c "$(curl -fsSL [https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh](https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh))"
 {% endhint %}
 
 ## Install iTerm2
@@ -62,7 +66,7 @@ ZSH\_THEME="powerlevel10k/powerlevel10k"
 setup the plugins:
 
 {% hint style="info" %}
-plugins=\(git gitignore autojump wd docker zsh-autosuggestions zsh-syntax-highlighting\)
+plugins=(git gitignore autojump wd docker zsh-autosuggestions zsh-syntax-highlighting)
 {% endhint %}
 
 ### Install autojump
@@ -74,19 +78,19 @@ brew install autojump
 ### Install zsh-autosuggestions
 
 {% hint style="info" %}
-git clone [https://github.com/zsh-users/zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) ${ZSH\_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone [https://github.com/zsh-users/zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) ${ZSH\_CUSTOM:-\~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 {% endhint %}
 
 ### Install zsh-syntax-highlighting
 
 {% hint style="info" %}
-git clone [https://github.com/zsh-users/zsh-syntax-highlighting.git](https://github.com/zsh-users/zsh-syntax-highlighting.git) ${ZSH\_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone [https://github.com/zsh-users/zsh-syntax-highlighting.git](https://github.com/zsh-users/zsh-syntax-highlighting.git) ${ZSH\_CUSTOM:-\~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 {% endhint %}
 
 Don't forget to call
 
 {% hint style="info" %}
-source ~/.zshrc
+source \~/.zshrc
 {% endhint %}
 
 ## Configure Powerlevel10k
@@ -95,21 +99,20 @@ Now open a new iTerm and follow the wizard to configure the theme, if the wizard
 
 ![](../.gitbook/assets/configuration-wizard.gif)
 
-Reference: [https://github.com/romkatv/powerlevel10k\#oh-my-zsh](https://github.com/romkatv/powerlevel10k#oh-my-zsh)
+Reference: [https://github.com/romkatv/powerlevel10k#oh-my-zsh](https://github.com/romkatv/powerlevel10k#oh-my-zsh)
 
 ## Clone iTerm2-Color-Schemes
 
 {% hint style="info" %}
-`git clone`[`https://github.com/mbadolato/iTerm2-Color-Schemes.git`](https://github.com/mbadolato/iTerm2-Color-Schemes.git)\`\`
+`git clone`[`https://github.com/mbadolato/iTerm2-Color-Schemes.git`](https://github.com/mbadolato/iTerm2-Color-Schemes.git)``
 {% endhint %}
 
-Go to iTerm-&gt;Preferences-&gt;Profiles-&gt;Colors, you can import color schemes from iTerm2-Color-Schemes/scheme. I personally recommend "Chester".
+Go to iTerm->Preferences->Profiles->Colors, you can import color schemes from iTerm2-Color-Schemes/scheme. I personally recommend "Chester".
 
-![](../.gitbook/assets/image%20%286%29.png)
+![](<../.gitbook/assets/image (6).png>)
 
-![](../.gitbook/assets/image%20%284%29.png)
+![](<../.gitbook/assets/image (4).png>)
 
-Go to iTerm-&gt;Preferences-&gt;Profiles-&gt;Text, you can change the font
+Go to iTerm->Preferences->Profiles->Text, you can change the font
 
-![](../.gitbook/assets/image%20%282%29.png)
-
+![](<../.gitbook/assets/image (2).png>)

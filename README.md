@@ -1,7 +1,7 @@
 # 101- ACAP for ASAP
 
 {% hint style="info" %}
-You can find the GitHub repo at: [https://github.com/JingGe/101](https://github.com/JingGe/101)
+GitHub repo: [https://github.com/JingGe/101](https://github.com/JingGe/101)
 {% endhint %}
 
 Building distributed systems is complicated. Many different technologies have been used either as the fundamental components or as the tools to make the development to be more efficient. In addition to this, many modern distributed platforms are using multiple languages to handle different technical requirements.

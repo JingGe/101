@@ -4,6 +4,10 @@ description: Using HBaseConnectorITCase as the real case
 
 # Debug Flink ITCase
 
+{% hint style="info" %}
+GitHub repo: [https://github.com/JingGe/101](https://github.com/JingGe/101)
+{% endhint %}
+
 Most of the Flink ITCase can be run as same as the normal unit test, you can therefore debug it in the IntelliJ IDEA. For some complicated ITCase, if it could not run in the IDEA, you can consider setting up the remote debugging.
 
 In this section we will use the real ITCase HBaseConnectorITCase as the example, so you can use it in your daily development.
