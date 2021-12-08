@@ -6,4 +6,4 @@ This book is written for developers who have strong Java background and want to 
 
 Real projects will be used as examples to let you get your hand dirty at the first time. This is the key different between this book and other books using Hello World! examples. At the time of this writing, I am working on the Flink project. Most examples will come from it.&#x20;
 
-Let's get start. &#x20;
+[Let's get start](101-getting-started-with-flink-development/flink-dev.md). &#x20;
