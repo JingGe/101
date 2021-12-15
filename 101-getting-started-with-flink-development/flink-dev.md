@@ -58,5 +58,5 @@ I had got stuck at: 8. Build the Project in Intellij Idea (“Build” → “Bu
 **Alternatively, just install java 11 before you even start cloning the repo. This will save you a lot of time.**
 {% endhint %}
 
-Now you should have a clean Flink development env ready on your local computer. \
+Now you should have a clean Flink development env ready on your local development. \
 ****
