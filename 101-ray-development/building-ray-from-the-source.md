@@ -98,7 +98,7 @@ run the following script the skip download the pyarrow again while runnig the bu
 
 If you see something like this:
 
-![](../.gitbook/assets/49b7aab8-3fe2-4384-ab30-ffb2aa883215.png)
+![](../.gitbook/assets/49B7AAB8-3FE2-4384-AB30-FFB2AA883215.png)
 
 Please go to ray dir and run:
 

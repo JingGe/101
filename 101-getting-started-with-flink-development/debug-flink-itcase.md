@@ -36,7 +36,7 @@ If you are not familiar with the remote debug setup in IntelliJ IDEA, please ref
 
 For this case, the setup will look like this:
 
-![](<../.gitbook/assets/image (10) (1).png>)
+![](<../.gitbook/assets/image (13).png>)
 
 Step 2 is done, let's move to step 3.
 
@@ -52,7 +52,7 @@ Now you can set up some break points in your class and start debug in the IDEA. 
 
 And in the IDEA, you will see the the process is paused at the break point, like this:
 
-![](<../.gitbook/assets/image (9) (1).png>)
+![](<../.gitbook/assets/image (10).png>)
 
 Now happy debugging!
 

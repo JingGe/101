@@ -38,7 +38,7 @@ You can read the official doc from Flink for further information in details:
 
 [Setting up a Flink development environment](https://cwiki.apache.org/confluence/display/FLINK/Setting+up+a+Flink+development+environment)
 
-[Building Flink from Source](https://ci.apache.org/projects/flink/flink-docs-release-1.13/docs/flinkdev/building/)
+[Building Flink from Source](https://nightlies.apache.org/flink/flink-docs-master/docs/flinkdev/building/)
 
 {% hint style="info" %}
 Since the maven build will take long time to download dependencies for the first time, you might consider reading the [contribution doc](doc-to-read-before-coding.md) in parallel.

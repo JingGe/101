@@ -13,7 +13,7 @@ GitHub repo: [https://github.com/JingGe/101](https://github.com/JingGe/101)
 
 If you like the following iTerm2 style, you are at the right place. I will show you how to get this setup in 10 min.
 
-![](<../.gitbook/assets/image (3).png>)
+![](<../.gitbook/assets/image (2).png>)
 
 ## Install ohmyzsh
 
@@ -109,10 +109,10 @@ Reference: [https://github.com/romkatv/powerlevel10k#oh-my-zsh](https://github.c
 
 Go to iTerm->Preferences->Profiles->Colors, you can import color schemes from iTerm2-Color-Schemes/scheme. I personally recommend "Chester".
 
-![](<../.gitbook/assets/image (6).png>)
+![](<../.gitbook/assets/image (5).png>)
 
-![](<../.gitbook/assets/image (4).png>)
+![](<../.gitbook/assets/image (7).png>)
 
 Go to iTerm->Preferences->Profiles->Text, you can change the font
 
-![](<../.gitbook/assets/image (2).png>)
+![](<../.gitbook/assets/image (8).png>)

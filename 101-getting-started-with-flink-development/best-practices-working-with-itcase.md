@@ -98,7 +98,7 @@ mvn test
 -pl flink-connectors/flink-connector-hbase-2.2
 ```
 
-![](<../.gitbook/assets/image (12).png>)
+![](<../.gitbook/assets/image (15).png>)
 
 you will see the log has been created:
 
@@ -108,7 +108,7 @@ In the log file you will get details information like a HBase MiniCluster and mu
 
 When you walk through the log, you will find there are some thrown runtime exception java.lang.IllegalStateException tells us that the MiniCluster is not yet running or has already been shut down, which turns out that the CollectResultFetcher was Failed and some data might be lost.
 
-![](<../.gitbook/assets/image (10).png>)
+![](<../.gitbook/assets/image (11).png>)
 
 The root cause is, since the shutdown of the MiniCluster will be called asynchronously, CollectResultFetcher will got data lost sometimes based on race conditions and the unchecked RuntimeException java.lang.IllegalStateException will be thrown that we were not aware of.
 
@@ -162,7 +162,7 @@ By default, each query will trigger a new MiniCluster up and down. you can image
 
 After using @ClassRule to control it, the maven takes 1:38 min:
 
-![](<../.gitbook/assets/image (11).png>)
+![](<../.gitbook/assets/image (12).png>)
 
 Don't under estimate the improvement. After considering the time cost of HBase initialisation, job submit and execution etc., each test method may only cost few seconds to finish. Compare to the last maven test, we saved 15 seconds for 9 tests. The performance improvement is significantly.
 
