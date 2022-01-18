@@ -49,7 +49,7 @@ Beyond these common parts, there are some special matters that need attention:
 * [Avoid Mockito](https://docs.google.com/presentation/d/1fZlTjOJscwmzYadPGl23aui6zopl94Mn5smG-rB0qT8/edit#slide=id.g2fa61f7d00\_0\_136) - Use reusable test implementations
 
 {% hint style="danger" %}
-**Get consensus with the committer, before you try to contribute code.**
+**Get consensus with the committer, before you try to contribute code. You can find all Committers at** [**here**](https://people.apache.org/phonebook.html?project=flink)**. The "People" section on the Flink Community & Project Info page might be out of date.**
 {% endhint %}
 
 {% hint style="danger" %}
