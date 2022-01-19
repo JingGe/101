@@ -47,6 +47,7 @@ Beyond these common parts, there are some special matters that need attention:
 * There are [trade-offs](https://flink.apache.org/contributing/code-style-and-quality-common.html) to write code for data intensive processing, while code for coordination should continue keeping simple and clean, again Clean Code.
 * Flink keeps the dependency footprint small to avoid dependency clashes, e.g. extra framework like Guice will not be used for dependency injection purpose.
 * [Avoid Mockito](https://docs.google.com/presentation/d/1fZlTjOJscwmzYadPGl23aui6zopl94Mn5smG-rB0qT8/edit#slide=id.g2fa61f7d00\_0\_136) - Use reusable test implementations
+* The community has decided to migrate to JUnit 5 and AssertJ. New unit test should be built with them.
 
 {% hint style="danger" %}
 **Get consensus with the committer, before you try to contribute code. You can find all Committers at** [**here**](https://people.apache.org/phonebook.html?project=flink)**. The "People" section on the Flink Community & Project Info page might be out of date.**
