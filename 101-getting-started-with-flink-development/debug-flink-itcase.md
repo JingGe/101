@@ -36,7 +36,7 @@ If you are not familiar with the remote debug setup in IntelliJ IDEA, please ref
 
 For this case, the setup will look like this:
 
-![](<../.gitbook/assets/image (13).png>)
+![](<../.gitbook/assets/image (13) (1).png>)
 
 Step 2 is done, let's move to step 3.
 

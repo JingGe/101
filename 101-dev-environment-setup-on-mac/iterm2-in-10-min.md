@@ -75,6 +75,24 @@ plugins=(git gitignore autojump wd docker zsh-autosuggestions zsh-syntax-highlig
 brew install autojump
 {% endhint %}
 
+After visiting directories, use `j -s` to check the weights:
+
+![](<../.gitbook/assets/image (16).png>)
+
+Use `j <dir>` to jump to a directory with highest weight:
+
+![](<../.gitbook/assets/image (13).png>)
+
+Find more by using:
+
+{% hint style="info" %}
+j -h
+
+jc -h
+
+jco -h
+{% endhint %}
+
 ### Install zsh-autosuggestions
 
 {% hint style="info" %}
