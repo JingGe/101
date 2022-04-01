@@ -11,8 +11,12 @@ As the example, we will migrate the elasticsearch connectors to the external rep
 ```
 > git clone https://github.com/apache/flink.git
 > cd flink // ~/patch/flink
-> git filter-repo --path flink-connectors/flink-sql-connector-elasticsearch6 --path flink-connectors/flink-sql-connector-elasticsearch7 --path flink-connectors/flink-connector-elasticsearch6 --path flink-connectors/flink-connector-elasticsearch7 --path flink-connectors/flink-connector-elasticsearch-base
-
+> git filter-repo 
+--path flink-connectors/flink-sql-connector-elasticsearch6 
+--path flink-connectors/flink-sql-connector-elasticsearch7 
+--path flink-connectors/flink-connector-elasticsearch6 
+--path flink-connectors/flink-connector-elasticsearch7 
+--path flink-connectors/flink-connector-elasticsearch-base
 ```
 
 ### Rebase the new repo
