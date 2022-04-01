@@ -8,6 +8,7 @@
 * [Document To Read Before Coding](101-getting-started-with-flink-development/doc-to-read-before-coding.md)
 * [Debug Flink ITCase](101-getting-started-with-flink-development/debug-flink-itcase.md)
 * [Best Practices working with ITCase](101-getting-started-with-flink-development/best-practices-working-with-itcase.md)
+* [Migrate Java submodules to a new repo](101-getting-started-with-flink-development/migrate-java-submodules-to-a-new-repo.md)
 
 ## 101 - Ray Development
 
