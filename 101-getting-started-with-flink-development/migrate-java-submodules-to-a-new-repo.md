@@ -30,3 +30,14 @@ As the example, we will migrate the elasticsearch connectors to the external rep
 ```
 
 Now, you should have all elasticsearch connectors in the new repo with all commit history. It is then up to you if you want to modify the module structure via refactoring.
+
+### Rebase for the PR
+
+Given the master branch is where your repo forked from. Before starting a PR, you should rebase your branch to the master branch.
+
+```
+> git pull --rebase origin master
+> git push origin FLINK-26884-copy-elasticsearch-connectors -f
+```
+
+Now, you are ready to start the PR.
