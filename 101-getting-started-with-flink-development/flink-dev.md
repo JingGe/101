@@ -15,10 +15,10 @@ This document is valid for Flink 1.13. It took me more than two days to get ever
 ## Get the code and build Flink
 
 {% hint style="warning" %}
-**To save your time, Java 11, Intellij Idea, and maven 3.2.5 are recommended**
+**To save your time, Java 11, Intellij Idea, and maven 3.8.6 are recommended**
 {% endhint %}
 
-Make sure you have Java 11 and Maven 3.2.5 installed. Fork your own Flink repo and checkout the source code from Github and run:
+Make sure you have Java 11 and Maven 3.8.6 installed. Fork your own Flink repo and checkout the source code from Github and run:
 
 ```
 $ mvn clean install -DskipTests
