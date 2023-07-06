@@ -25,6 +25,10 @@ This document will focus on how to get involved into Flink development and how t
 Put your focus on the Beta, Ready\&Evolving, MVP stages and avoid spending time on phasing out features that will be deprecated in the future.
 {% endhint %}
 
+{% hint style="info" %}
+New Roadmap for upcoming Flink 2.0 is under construction.
+{% endhint %}
+
 It is highly recommended to ready whole page of the roadmap. The content is very valuable. After doing that, you can glance over [Community & Project Info](https://flink.apache.org/community.html) to get information about the mailing lists, Jira issue tracker, project wiki, contact to committers, etc. for the daily development.&#x20;
 
 ## Contribution Matters Needing Attention
