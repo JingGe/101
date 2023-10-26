@@ -1,0 +1,103 @@
+Release notes - Flink 1.18
+
+These release notes discuss important aspects, such as configuration, behavior or dependencies,
+that changed between Flink 1.17 and Flink 1.18. Please read these notes carefully if you are
+planning to upgrade your Flink version to 1.18.
+
+
+Build System
+
+"FLINK-15736"	"Support Java 17 (LTS)"	"Apache Flink was made ready to compile and run with Java 17 (LTS). This feature is still in beta mode. Issues should be reported in Flink's bug tracker."
+Clusters & Deployment
+
+
+
+
+Table API & SQL
+
+Unified the max display column width for SqlClient and Table APi in both Streaming and Batch execMode
+
+FLINK-30025
+Introduction of the new ConfigOption DISPLAY_MAX_COLUMN_WIDTH (table.display.max-column-width) in the TableConfigOptions class is now in place. This option is utilized when displaying table results through the Table API and sqlClient. As sqlClient relies on the Table API underneath, and both sqlClient and the Table API serve distinct and isolated scenarios, it is a rational choice to maintain a centralized configuration. This approach also simplifies matters for users, as they only need to manage one configOption for display control.
+
+During the migration phase, while sql-client.display.max-column-width is deprecated, any changes made to sql-client.display.max-column-width will be automatically transferred to table.display.max-column-width. Caution is advised when using the CLI, as it is not recommended to switch back and forth between these two options.
+
+"FLINK-31496"	"FLIP-293: Introduce Flink Jdbc Driver For Sql Gateway"	"Apache Flink now supports JDBC driver to access sql-gateway, you can use the driver in any cases that support standard JDBC extension to connect to Flink cluster."
+
+"FLINK-31535"	"Extend watermark-related features for SQL"	"Flink now enables user config watermark emit strategy/watermark alignment/watermark idle-timeout in Flink sql job with dynamic table options and 'Options' hint."
+
+"FLINK-32431"	"Support configuring CatalogStore in Table API"	"Implemented in master: 65214293470ca2c131a966915b763b8090e7828e"
+
+"FLINK-32656"	"Deprecate ManagedTable related APIs"	"ManagedTable related APIs are deprecated and will be removed in a future major release."
+
+
+
+Connectors & Libraries
+
+"FLINK-31015"	"SplitReader doesn't extend AutoCloseable but implements close""SplitReader interface now extends AutoCloseable instead of providing its own method signature."
+
+
+"FLINK-32610"	"JSON format supports projection push down"	"The JSON format introduced JsonParser as a new default way to deserialize JSON data. JsonParser is a Jackson JSON streaming API to read JSON data which is much faster and consumes less memory compared to the previous JsonNode approach. This should be a compatible change, if you encounter any issues after upgrading, you can fallback to the previous JsonNode approach by setting `json.decode.json-parser.enabled` to `false`. "
+Runtime & Coordination
+
+
+"FLINK-31439"	"FLIP-298: Unifying the Implementation of SlotManager"	"Fine-grained resource management are now enabled by default. You can use it by specifying the resource requirement. More details can be found at https://nightlies.apache.org/flink/flink-docs-master/docs/deployment/finegrained_resource/#usage."
+
+"FLINK-32420"	"Watermark aggregation performance is poor when watermark alignment is enabled and parallelism is high"	"This performance improvement would be good to mention in the release blog post. \r\n\r\nAs proven by the micro benchmarks (screenshots attached in the ticket), with 5000 subtasks, the time to calculate the watermark alignment on the JobManager by a factor of 76x (7664%). Previously such large jobs were actually at large risk of overloading JobManager, now that's far less likely to happen."
+
+
+"FLINK-32468"	"Replace Akka by Pekko"	"Flink's RPC framework is now based on Apache Pekko instead of Akka. Any Akka dependencies were removed."
+
+
+"FLINK-32486"	"FLIP-324: Introduce Runtime Filter for Flink Batch Jobs"	"We introduced a runtime filter for batch jobs in 1.18, which is designed to improve join performance. It will dynamically generate filter conditions for certain Join queries at runtime to reduce the amount of scanned or shuffled data, avoid unnecessary I/O and network transmission, and speed up the query. Its working principle is building a filter(e.g. bloom filter) based on the data on the small table side(build side) first, then passing this filter to the large table side(probe side) to filter the irrelevant data on it, this can reduce the data reaching the join and improve performance. \r\n"
+
+"FLINK-32548"	"Make watermark alignment ready for production use"	"The watermark alignment is ready for production since Flink-1.18, which completed a series of bug fixes and improvements related to watermark alignment. As proven by the micro benchmarks (screenshots attached in FLINK-32420), with 5000 subtasks, the time to calculate the watermark alignment on the JobManager by a factor of 76x (7664%). Previously such large jobs were actually at large risk of overloading JobManager, now that's far less likely to happen. "
+
+"FLINK-32880"	"Redundant taskManagers should always be fulfilled in FineGrainedSlotManager"	"Resolved in master: 7299da4cf688a2d87fd918b6327a0573bc88cbd8"
+
+"FLINK-32583"	"RestClient can deadlock if request made after Netty event executor terminated"	"Fixes a bug in the RestClient where making a request after the client was closed returns a future that never completes."
+
+"FLINK-32559"	"Deprecate Queryable State"	"The Queryable State feature is formally deprecated. It will be removed in future major version bumps."
+
+
+SDK
+
+"FLINK-32558"	"Properly deprecate DataSet API"	"DataSet API is formally deprecated, and will be removed in the next major release."
+
+Metric Reporters
+
+
+
+
+
+Checkpoints
+
+
+
+
+
+
+Python
+
+
+
+
+
+Dependency upgrades
+
+“FLINK-27998”
+"FLINK-28744"
+“FLINK-29319”	"Upgrade Calcite version to 1.32.0"	"Due to CALCITE-4861 (Optimization of chained CAST calls can lead to unexpected behavior), also Flink's casting behavior has slightly changed. Some corner cases might behave differently now: For example, casting from FLOAT/DOUBLE 9234567891.12 to INT/BIGINT has now Java behavior for overflows."
+
+
+
+
+
+
+
+
+
+
+
+
+

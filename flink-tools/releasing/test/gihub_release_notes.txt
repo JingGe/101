@@ -1,0 +1,44 @@
+#### Support Java 17 (LTS)
+##### [FLINK-15736](https://issues.apache.org/jira/browse/FLINK-15736)
+Apache Flink was made ready to compile and run with Java 17 (LTS). This feature is still in beta mode. Issues should be reported in Flink's bug tracker.
+
+#### FLIP-293: Introduce Flink Jdbc Driver For Sql Gateway
+##### [FLINK-31496](https://issues.apache.org/jira/browse/FLINK-31496)
+Apache Flink now supports JDBC driver to access sql-gateway, you can use the driver in any cases that support standard JDBC extension to connect to Flink cluster.
+
+#### Extend watermark-related features for SQL
+##### [FLINK-31535](https://issues.apache.org/jira/browse/FLINK-31535)
+Flink now enables user config watermark emit strategy/watermark alignment/watermark idle-timeout in Flink sql job with dynamic table options and 'Options' hint.
+
+#### Support configuring CatalogStore in Table API
+##### [FLINK-32431](https://issues.apache.org/jira/browse/FLINK-32431)
+Implemented in master: 65214293470ca2c131a966915b763b8090e7828e
+
+#### Deprecate ManagedTable related APIs
+##### [FLINK-32656](https://issues.apache.org/jira/browse/FLINK-32656)
+ManagedTable related APIs are deprecated and will be removed in a future major release.
+
+#### Watermark aggregation performance is poor when watermark alignment is enabled and parallelism is high
+##### [FLINK-32420](https://issues.apache.org/jira/browse/FLINK-32420)
+This performance improvement would be good to mention in the release blog post. \r\n\r\nAs proven by the micro benchmarks (screenshots attached in the ticket), with 5000 subtasks, the time to calculate the watermark alignment on the JobManager by a factor of 76x (7664%). Previously such large jobs were actually at large risk of overloading JobManager, now that's far less likely to happen.
+
+#### Make watermark alignment ready for production use
+##### [FLINK-32548](https://issues.apache.org/jira/browse/FLINK-32548)
+The watermark alignment is ready for production since Flink-1.18, which completed a series of bug fixes and improvements related to watermark alignment. As proven by the micro benchmarks (screenshots attached in FLINK-32420), with 5000 subtasks, the time to calculate the watermark alignment on the JobManager by a factor of 76x (7664%). Previously such large jobs were actually at large risk of overloading JobManager, now that's far less likely to happen. 
+
+#### Redundant taskManagers should always be fulfilled in FineGrainedSlotManager
+##### [FLINK-32880](https://issues.apache.org/jira/browse/FLINK-32880)
+Resolved in master: 7299da4cf688a2d87fd918b6327a0573bc88cbd8
+
+#### RestClient can deadlock if request made after Netty event executor terminated
+##### [FLINK-32583](https://issues.apache.org/jira/browse/FLINK-32583)
+Fixes a bug in the RestClient where making a request after the client was closed returns a future that never completes.
+
+#### Deprecate Queryable State
+##### [FLINK-32559](https://issues.apache.org/jira/browse/FLINK-32559)
+The Queryable State feature is formally deprecated. It will be removed in future major version bumps.
+
+#### Properly deprecate DataSet API
+##### [FLINK-32558](https://issues.apache.org/jira/browse/FLINK-32558)
+DataSet API is formally deprecated, and will be removed in the next major release.
+
